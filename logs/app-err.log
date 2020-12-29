@@ -1,0 +1,25 @@
+You have triggered an unhandledRejection, you may have forgotten to catch a Promise rejection:
+Error: connect ETIMEDOUT
+    at PoolConnection.Connection._handleConnectTimeout (C:\Users\50629\Desktop\firstPro\node_modules\mysql\lib\Connection.js:409:13)
+    at Object.onceWrapper (events.js:421:28)
+    at Socket.emit (events.js:315:20)
+    at Socket._onTimeout (net.js:483:8)
+    at listOnTimeout (internal/timers.js:554:17)
+    at processTimers (internal/timers.js:497:7)
+    --------------------
+    at Protocol._enqueue (C:\Users\50629\Desktop\firstPro\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (C:\Users\50629\Desktop\firstPro\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at PoolConnection.connect (C:\Users\50629\Desktop\firstPro\node_modules\mysql\lib\Connection.js:116:18)
+    at Pool.getConnection (C:\Users\50629\Desktop\firstPro\node_modules\mysql\lib\Pool.js:48:16)
+    at C:\Users\50629\Desktop\firstPro\db\index.js:105:14
+    at new Promise (<anonymous>)
+    at querySql (C:\Users\50629\Desktop\firstPro\db\index.js:103:12)
+    at C:\Users\50629\Desktop\firstPro\routes\stockData.js:61:18
+    at Layer.handle [as handle_request] (C:\Users\50629\Desktop\firstPro\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\50629\Desktop\firstPro\node_modules\express\lib\router\route.js:137:13)
+    at Route.dispatch (C:\Users\50629\Desktop\firstPro\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\Users\50629\Desktop\firstPro\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\50629\Desktop\firstPro\node_modules\express\lib\router\index.js:281:22
+    at Function.process_params (C:\Users\50629\Desktop\firstPro\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\Users\50629\Desktop\firstPro\node_modules\express\lib\router\index.js:275:10)
+    at Function.handle (C:\Users\50629\Desktop\firstPro\node_modules\express\lib\router\index.js:174:3)
