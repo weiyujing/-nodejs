@@ -9,7 +9,7 @@ module.exports = {
     ignore_watch: [ // 不⽤监听的⽂件
       "node_modules",
       "logs"
-      
+
       ],
       "error_file": "./logs/app-err.log", // 错误⽇志⽂件
  "out_file": "./logs/app-out.log",
@@ -24,11 +24,11 @@ module.exports = {
 
   deploy : {
     production : {
-      user : 'SSH_USERNAME',
-      host : 'SSH_HOSTMACHINE',
+      user : 'root',
+      host : '192.168.23.128',
       ref  : 'origin/master',
-      repo : 'GIT_REPOSITORY',
-      path : 'DESTINATION_PATH',
+      repo : 'git@github.com:weiyujing/-nodejs.git',
+      path : '/var/www/production',
       'pre-deploy-local': '',
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
       'pre-setup': ''
