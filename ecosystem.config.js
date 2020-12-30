@@ -27,11 +27,16 @@ module.exports = {
       user : 'root',
       host : '192.168.23.128',
       ref  : 'origin/master',
-      repo : 'git@github.com:weiyujing/-nodejs.git',
-      path : '/var/www/production',
+      repo : 'git@github.com:weiyujing/stockNodejs.git',
+      //path:服务器地址
+      path : '/usr/local/myNodeProject',
+      ssh_options: "StrictHostKeyChecking=no",
       'pre-deploy-local': '',
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
-      'pre-setup': ''
+      'pre-setup': '',
+      "env": {
+        "NODE_ENV": "production"
+        }
     }
   }
 };
